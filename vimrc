@@ -9,6 +9,7 @@ set encoding=utf-8
 set t_Co=256
 set nowrap
 set mouse=a
+let &colorcolumn=join(range(81,121),",")
 filetype plugin indent on
 syntax on
 " }}}2
@@ -94,6 +95,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" toggle spellcheck
+nnoremap <silent> <leader>S :setlocal spell! spelllang=en_us<CR>
+
+" call script to swap ESC and CAPS
+nnoremap <silent> <leader>E :!escswap<CR><CR>
 " }}}2
 
 """ Insert mode {{{2
@@ -119,10 +126,23 @@ if has("autocmd")
   augroup Misc_Global "{{{2
     autocmd!
     autocmd Filetype ruby,markdown,gitcommit setlocal spell spelllang=en_us
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
     autocmd BufRead TODO setlocal syntax=abel
   augroup END " }}}2
-
 endif " has("autocmd")
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}1
+"-------------------------------- Misc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""{{{1
 
+" include plugin manager config
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
+" include local config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}1
