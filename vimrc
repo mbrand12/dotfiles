@@ -80,9 +80,10 @@ let mapleader = " "
 nnoremap ; :
 nnoremap : ;
 
-" quick edit and quick reload of .vimrc
-nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
-nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
+" quick edit and quick reload of .vimrc and .vimrc.bundles
+nnoremap <silent> <leader>vv :e $MYVIMRC<CR>
+nnoremap <silent> <leader>vb :e $MYVIMRC.bundles<CR>
+nnoremap <silent> <leader>vs :so $MYVIMRC<CR>
 
 "insert new line below without going into INSERT
 nnoremap <CR> o<Esc>
@@ -95,6 +96,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" better buffer navigation
+nnoremap <leader><Left> :bprevious<CR>
+nnoremap <leader><Right> :bnext<CR>
 
 " toggle spellcheck
 nnoremap <silent> <leader>S :setlocal spell! spelllang=en_us<CR>
