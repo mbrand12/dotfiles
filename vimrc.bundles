@@ -45,6 +45,7 @@ syntax on
 
 """ NERDTree
 let g:NERDTreeWinSize=45
+let g:NERDTreeShowHidden=1
 
 """ ctrlP
 let g:ctrlp_map = '<c-p>'
@@ -54,6 +55,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme='raven'
 
 """ neocomplete
