@@ -15,5 +15,8 @@ setopt interactivecomments
 
 setopt CORRECT
 
+# Aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
