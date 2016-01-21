@@ -29,6 +29,7 @@ set title           " change terminal title
 set number          " display line numbers
 set showcmd         " displays the commands you type
 set cursorline      " underline the current line
+set cursorcolumn    " add vertical line ass well
 set showmatch       " show matching parenthesis
 set listchars=tab:»·,trail:.,extends:#,nbsp:.
 set list            " display whitespace and other listchars
@@ -81,8 +82,8 @@ nnoremap ; :
 nnoremap : ;
 
 " quick edit and quick reload of .vimrc and .vimrc.bundles
-nnoremap <silent> <leader>vv :e $MYVIMRC<CR>
-nnoremap <silent> <leader>vb :e $MYVIMRC.bundles<CR>
+nnoremap <silent> <leader>vv :vsplit $MYVIMRC<CR>
+nnoremap <silent> <leader>vb :vsplit $MYVIMRC.bundles<CR>
 nnoremap <silent> <leader>vs :so $MYVIMRC<CR>
 
 "insert new line below without going into INSERT

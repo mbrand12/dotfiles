@@ -29,6 +29,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Shougo/neocomplete'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'mbrand12/vim-citizen256'
 
@@ -57,6 +58,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme='raven'
+
 
 """ neocomplete
 let g:neocomplete#enable_at_startup = 1
