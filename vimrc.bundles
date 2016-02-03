@@ -53,6 +53,7 @@ let g:NERDTreeShowHidden=1
 """ ctrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/vendor/**,*/node_modules/**
 
 """ airline
 let g:airline_powerline_fonts = 1
