@@ -16,10 +16,10 @@ syntax on
 
 """ Tabs and Indentantion {{{2
 set expandtab    " use spaces instead of tab
-set tabstop=2    " set tab to 2 spaces
+set tabstop=4    " set tab to spaces
 set autoindent   " copy indent from the current line to the new line
 set copyindent   " copy indent characters from the current line to the new line
-set shiftwidth=2 " use 2 spaces when autoindenting
+set shiftwidth=4 " use spaces when autoindenting
 set smarttab     " use shiftwidth when inserting on the start of the line
 set backspace=2  " backspace over autoindent, eol and start of insert
 " }}}2
@@ -122,6 +122,7 @@ if has("autocmd")
   augroup Ruby "{{{2
     autocmd!
     autocmd Filetype ruby setlocal foldmethod=syntax
+    autocmd Filetype ruby setlocal ts=2 sw=2
   augroup END " }}}2
 
   augroup git "{{{2

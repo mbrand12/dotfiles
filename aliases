@@ -1,2 +1,6 @@
 # Ruby - Bundler
 alias be="bundle exec"
+
+#PHP
+alias pu="phpunit"
+alias cept="codecept"

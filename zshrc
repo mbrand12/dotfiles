@@ -13,10 +13,14 @@ setopt RM_STAR_WAIT
 
 setopt interactivecomments
 
-setopt CORRECT
+# setopt CORRECT
 
 # Aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# Allows calling `$ phpunut` instead of `$ vendor/bin/phpunut` when such
+# path exists relative to the current directory
+export PATH="$PATH:./vendor/bin"
