@@ -1,9 +1,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="gallois"
+ZSH_CUSTOM="$HOME/dotfiles"
 
-plugins=(git zsh-syntax-highlighting)
+ZSH_THEME="gallois-kolo"
+
+plugins=(git zsh-syntax-highlighting svn-fast-info)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -24,3 +26,6 @@ setopt interactivecomments
 # Allows calling `$ phpunut` instead of `$ vendor/bin/phpunut` when such
 # path exists relative to the current directory
 export PATH="$PATH:./vendor/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
