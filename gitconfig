@@ -5,3 +5,5 @@
   path = ~/.gitconfig.local
 [core]
   excludesfile = ~/.gitignore
+[credential]
+  helper = cache --timeout=7200
