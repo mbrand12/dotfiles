@@ -1,0 +1,18 @@
+#!/bin/sh
+# `$ sudo ln -s ~/dotfiles/p4merge-diff3-svn-wrapper /usr/local/bin/p4merge-diff3-svn-wrapper `
+DIFFTOOL="/usr/local/bin/p4merge"
+
+# take the arguments provided by svn and 
+R_LABEL=${4}
+B_LABEL=${6}
+L_LABEL=${8}
+
+MINE=${9}
+OLDER=${10}
+YOURS=${11}
+
+# call the difftool
+$DIFFTOOL -nl $L_LABEL -nb $B_LABEL -nr $R_LABEL -nm "Merged" $OLDER $YOURS $MINE $MINE 2> /dev/null
+
+cat $MINE
+

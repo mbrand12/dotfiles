@@ -1,0 +1,13 @@
+#!/bin/sh
+# `$ sudo ln -s ~/dotfiles/p4merge-diff-svn-wrapper /usr/local/bin/p4merge-diff-svn-wrapper `
+DIFFTOOL="/usr/local/bin/p4merge"
+
+# take the arguments provided by svn and 
+L_LABEL=${3}
+R_LABEL=${5}
+LEFT=${6}
+RIGHT=${7}
+
+# call the difftool
+$DIFFTOOL -nl "$L_LABEL" -nr "$R_LABEL" $LEFT $RIGHT 2> /dev/null
+

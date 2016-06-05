@@ -1,0 +1,9 @@
+# `$ mv ~/.subversion/config ~/.subversion/config.default `
+# `$ ln -s ~/dotfiles/svnconfig ~/.subversion/config `
+
+[helpers]
+editor-cmd = vim
+diff-cmd = p4merge-diff-svn-wrapper
+diff3-cmd = p4merge-diff3-svn-wrapper
+merge-tool-cmd = p4merge-svn-wrapper
+
