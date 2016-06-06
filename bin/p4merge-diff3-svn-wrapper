@@ -1,5 +1,5 @@
 #!/bin/sh
-# `$ sudo ln -s ~/dotfiles/p4merge-diff3-svn-wrapper /usr/local/bin/p4merge-diff3-svn-wrapper `
+# `$ sudo ln -s ~/dotfiles/bin/p4merge-diff3-svn-wrapper /usr/local/bin/p4merge-diff3-svn-wrapper `
 DIFFTOOL="/usr/local/bin/p4merge"
 
 # take the arguments provided by svn and 
