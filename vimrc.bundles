@@ -20,6 +20,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'majutsushi/tagbar'
+Plugin 'ludovicchabant/vim-gutentags'
 
 Plugin 'tpope/vim-rails'
 Plugin 'tobyS/pdv'
@@ -80,6 +81,9 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+""" gutentags
+let g:gutentags_cache_dir=$HOME ."/src/.gutentags"
 
 """ pdv
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
