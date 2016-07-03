@@ -19,6 +19,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
+Plugin 'majutsushi/tagbar'
+
 Plugin 'tpope/vim-rails'
 Plugin 'tobyS/pdv'
 Plugin 'tobyS/vmustache'
@@ -107,6 +109,9 @@ nnoremap <silent> <leader>nf :NERDTreeFind<CR>
 """ neocomplete
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-e>  neocomplete#cancel_popup()
+
+""" tagbar
+nnoremap <silent> <leader>tt :Tagbar<CR>
 
 """ pdv
 nnoremap <silent> <leader>dp :call pdv#DocumentWithSnip()<CR>
