@@ -19,32 +19,28 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
-Plugin 'majutsushi/tagbar'
-
-Plugin 'tpope/vim-rails'
-Plugin 'tobyS/pdv'
-Plugin 'tobyS/vmustache'
-Plugin 'joonty/vim-phpqa'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'heavenshell/vim-jsdoc'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mbrand12/vim-citizen256'
 
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-dispatch'
 Plugin 'airblade/vim-gitgutter'
+
 Plugin 'Shougo/neocomplete'
+Plugin 'davidhalter/jedi-vim'
+
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'mbrand12/vim-citizen256'
 
 """Phyton Plugins
-Plugin 'vim-scripts/indentpython.vim'
+Plugin 'Vimjas/vim-python-pep8-indent'
 
 call vundle#end()
 colorscheme citizen256
@@ -73,32 +69,25 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme='raven'
 
-
 """ neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+  endif
+let g:neocomplete#force_omni_input_patterns.python = '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 
 """ snips
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-""" gutentags
-let g:gutentags_cache_dir=$HOME ."/src/.gutentags"
-
-""" pdv
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-
-""" phpqa
-let g:phpqa_run_on_write = 0
-let g:phpqa_messdetector_autorun = 0
-let g:phpqa_codesniffer_autorun = 0
-let g:phpqa_codecoverage_autorun = 0
-let g:phpqa_codecoverage_file = "logs/coverage.xml"
-
-""" vim-jsdoc
-let g:jsdoc_allow_input_prompt = 1
+""" jedi-vim
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#completions_enabled = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}1
 "-------------------------------- Plugin specific mappings
@@ -116,14 +105,6 @@ nnoremap <silent> <leader>nf :NERDTreeFind<CR>
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
-""" tagbar
-nnoremap <silent> <leader>tt :Tagbar<CR>
-
-""" pdv
-nnoremap <silent> <leader>dp :call pdv#DocumentWithSnip()<CR>
-
-""" vim-jsdoc
-nnoremap <silent> <leader>dj :JsDoc<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}1
 "-------------------------------- Plugin specific autocommands
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""{{{1
@@ -137,6 +118,11 @@ if has("autocmd")
   augroup snippets
     autocmd!
     autocmd Filetype blade :UltiSnipsAddFiletypes blade.php.html
+  augroup END
+
+  augroup jedi-vim
+    autocmd!
+    autocmd FileType python setlocal omnifunc=jedi#completions
   augroup END
 endif
 

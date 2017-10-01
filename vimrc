@@ -128,7 +128,7 @@ if has("autocmd")
 
   augroup Python "{{{2
     autocmd!
-    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=7 fileformat=unix
+    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 fileformat=unix
   augroup END " }}}2
 
   augroup git "{{{2
