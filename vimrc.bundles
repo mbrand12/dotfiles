@@ -20,7 +20,6 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'majutsushi/tagbar'
-Plugin 'ludovicchabant/vim-gutentags'
 
 Plugin 'tpope/vim-rails'
 Plugin 'tobyS/pdv'
@@ -43,6 +42,9 @@ Plugin 'Shougo/neocomplete'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'mbrand12/vim-citizen256'
+
+"""Phyton Plugins
+Plugin 'vim-scripts/indentpython.vim'
 
 call vundle#end()
 colorscheme citizen256
