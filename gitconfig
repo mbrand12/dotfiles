@@ -1,9 +1,26 @@
 [alias]
   co = checkout
   st = status
+  dt = difftool
 [include]
   path = ~/.gitconfig.local
 [core]
   excludesfile = ~/.gitignore
-[credential]
-  helper = cache --timeout=7200
+[mergetool]
+    prompt = false
+	keepBackup = false
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[diff]
+    tool = p4merge
+[difftool]
+    prompt = false
+    keepBackup = false
+[difftool "p4merge"]
+    cmd = p4merge "$LOCAL" "$REMOTE"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
