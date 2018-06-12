@@ -1,0 +1,14 @@
+{
+    "cSpell.userWords": [
+        "presentational"
+    ],
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.detectIndentation": false,
+
+    "[html]": {
+        "editor.tabSize": 4
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    }
+}
