@@ -11,7 +11,6 @@ set nowrap
 set mouse=a
 let &colorcolumn=join(range(81,121),",")
 filetype plugin indent on
-let python_highlight_all=1
 syntax on
 " }}}2
 
@@ -105,9 +104,6 @@ nnoremap <leader><Right> :bnext<CR>
 
 " toggle spellcheck
 nnoremap <silent> <leader>S :setlocal spell! spelllang=en_us<CR>
-
-" call script to swap ESC and CAPS
-nnoremap <silent> <leader>E :!escswap<CR><CR>
 " }}}2
 
 """ Insert mode {{{2
@@ -120,17 +116,6 @@ inoremap jj <Esc>
 "-------------------------------- Autocomands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""{{{1
 if has("autocmd")
-  augroup Ruby "{{{2
-    autocmd!
-    autocmd Filetype ruby setlocal foldmethod=syntax
-    autocmd Filetype ruby setlocal ts=2 sw=2
-  augroup END " }}}2
-
-  augroup Python "{{{2
-    autocmd!
-    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 fileformat=unix
-  augroup END " }}}2
-
   augroup git "{{{2
     autocmd!
     autocmd Filetype gitcommit setlocal colorcolumn=72
