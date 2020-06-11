@@ -6,21 +6,3 @@
   path = ~/.gitconfig.local
 [core]
   excludesfile = ~/.gitignore
-[mergetool]
-    prompt = false
-	keepBackup = false
-[mergetool "p4merge"]
-    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-    keepTemporaries = false
-    trustExitCode = false
-    keepBackup = false
-[diff]
-    tool = p4merge
-[difftool]
-    prompt = false
-    keepBackup = false
-[difftool "p4merge"]
-    cmd = p4merge "$LOCAL" "$REMOTE"
-    keepTemporaries = false
-    trustExitCode = false
-    keepBackup = false

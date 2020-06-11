@@ -1,6 +1,0 @@
-#!/bin/sh
-# `$ sudo ln -s ~/dotfiles/bin/p4merge-svn-wrapper /usr/local/bin/p4merge-svn-wrapper `
-echo $*
-shift 5
-/usr/local/bin/p4merge $@
-
