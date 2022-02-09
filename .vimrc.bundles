@@ -2,14 +2,9 @@
 "-------------------------------- Package manager config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""{{{1
 
-""" pathogen {{{2
-" filetype off
-" execute pathogen#infect()
-" filetype plugin indent on
-" syntax on
-""" }}}2
-
 """ vundle {{{2
+" setup vundle:  `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+" run `:PluginInstall`
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
@@ -79,4 +74,3 @@ if has("autocmd")
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}}}1
-

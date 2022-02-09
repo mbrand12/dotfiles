@@ -1,0 +1,19 @@
+[alias]
+  poh = push origin HEAD
+  ci = commit
+  co = checkout
+  st = status
+  dt = difftool
+  diffs = diff --staged
+  slist = stash list
+  sci = stash push -m
+  sai = stash apply --index
+  logg = log --all --decorate --oneline --graph
+  logo = log --oneline
+[core]
+  excludesfile = ~/.gitignore
+  commentChar = ";"
+[pull]
+  ff = only
+[include]
+  path = ~/.gitconfig.local

@@ -1,8 +1,0 @@
-[alias]
-  co = checkout
-  st = status
-  dt = difftool
-[include]
-  path = ~/.gitconfig.local
-[core]
-  excludesfile = ~/.gitignore

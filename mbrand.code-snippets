@@ -1,0 +1,31 @@
+{
+	"LOGMB": {
+		"scope": "javascript",
+		"prefix": "LOGMB",
+		"body": [
+			"console.log('LOGMB $1', $2);$0"
+		]
+	},
+	"RFC": {
+		"scope": "javascript",
+		"prefix": "RFC",
+		"body": [
+			"import React from 'react';",
+			"import PropTypes from 'prop-types';",
+			"",
+			"",
+			"const ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} = (props) => {",
+			"\treturn (<div>${0}</div>);",
+			"};",
+			"",
+			"${1}.defaultProps = {",
+			"}",
+			"",
+			"${1}.propTypes = {",
+			"}",
+			"",
+			"export default ${1};",
+			""
+		],
+	}
+}
