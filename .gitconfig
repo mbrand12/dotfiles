@@ -2,6 +2,8 @@
   poh = push origin HEAD
   ci = commit
   co = checkout
+  coB = checkout -b
+  cp = cherry-pick
   st = status
   dt = difftool
   diffs = diff --staged
@@ -10,9 +12,12 @@
   sai = stash apply --index
   logg = log --all --decorate --oneline --graph
   logo = log --oneline
+  addA = !git add -A && git diffs
+  uncommit = reset HEAD^
+  park =  !git add -A && git commit -m 'TEMP COMMIT PARKED' && touch PARKED && git logo
+  unpark = !rm PARKED && git uncommit && git logo
 [core]
   excludesfile = ~/.gitignore
-  commentChar = ";"
 [pull]
   ff = only
 [include]
